@@ -1,12 +1,7 @@
 package com.moneytrackingapp.repository;
 
 import com.moneytrackingapp.model.RecurringExpense;
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RecurringExpenseRepository {
-    List<RecurringExpense> findAll();
-    Optional<RecurringExpense> findById(Long id);
-    RecurringExpense save(RecurringExpense recurringExpense);
-    void deleteById(Long id);
+public interface RecurringExpenseRepository extends JpaRepository<RecurringExpense, Long> {
 }

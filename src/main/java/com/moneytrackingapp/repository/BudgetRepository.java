@@ -1,12 +1,7 @@
 package com.moneytrackingapp.repository;
 
 import com.moneytrackingapp.model.Budget;
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BudgetRepository {
-    List<Budget> findAll();
-    Optional<Budget> findById(Long id);
-    Budget save(Budget budget);
-    void deleteById(Long id);
+public interface BudgetRepository extends JpaRepository<Budget, Long> {
 }
